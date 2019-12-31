@@ -1,0 +1,38 @@
+# Copyright 2019 Matthew Calligaro
+# Makefile-advanced: A more advanced makefile for generating program
+
+# Declare variables
+CXX = clang++
+CXXFLAGS = -g -std=c++1z -Wall -Wextra -pedantic
+TARGET = program
+
+# Create the target executable
+all: $(TARGET)
+
+# Create the program executable by linking program.o and sheep.o
+program: program.o sheep.o
+	$(CXX) -o $@ $^ $(CXXFLAGS)
+
+# Create program.o by compiling program.cpp
+program.o: program.cpp sheep.hpp hat.hpp
+	$(CXX) $< -c $(CXXFLAGS)
+
+# Create sheep.o by compiling sheep.cpp
+sheep.o: sheep.cpp sheep.hpp hat.hpp
+	$(CXX) $< -c $(CXXFLAGS)
+
+# Remove all generated files (all object files + program + documentation)
+clean:
+	rm -rf *.o $(TARGET) documentation
+
+# Identify style mistakes with cpplint
+lint:
+	cpplint *.*pp
+
+# Automatically fix style mistakes with clang-format
+format:
+	clang-format --style=file -i *.*pp
+
+# Automatically generate html/latex documentation with doxygen
+documentation:
+	doxygen doxygen.cfg

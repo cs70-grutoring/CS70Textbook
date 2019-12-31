@@ -1,0 +1,21 @@
+# Copyright 2019 Matthew Calligaro
+# Makefile-simple: A simple makefile for generating program
+
+# Create the target executable
+all: program
+
+# Create the program executable by linking program.o and sheep.o
+program: program.o sheep.o
+	clang++ -o program program.o sheep.o -std=c++1z -g -Wall -Wextra -pedantic
+
+# Create program.o by compiling program.cpp
+program.o: program.cpp sheep.hpp hat.hpp
+	clang++ program.cpp -c -std=c++1z -g -Wall -Wextra -pedantic
+
+# Create sheep.o by compiling sheep.cpp
+sheep.o: sheep.cpp sheep.hpp hat.hpp
+	clang++ sheep.cpp -c -std=c++1z -g -Wall -Wextra -pedantic
+
+# Remove all generated files (all object files + program)
+clean:
+	rm -rf *.o program

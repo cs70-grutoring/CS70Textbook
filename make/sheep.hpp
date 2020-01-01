@@ -19,8 +19,8 @@ class Sheep {
  public:
   Sheep();
   Sheep(size_t age, Hat hat);
-  Sheep(const Sheep &other) = default;
-  Sheep &operator=(const Sheep &other) = default;
+  Sheep(const Sheep& other) = default;
+  Sheep& operator=(const Sheep& other) = default;
   ~Sheep() = default;
 
   /**

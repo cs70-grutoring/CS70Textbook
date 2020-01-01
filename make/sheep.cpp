@@ -12,8 +12,8 @@ Sheep::Sheep() : age_{1}, hat_{Top} {}
 
 Sheep::Sheep(size_t age, Hat hat) : age_{age}, hat_{hat} {}
 
-size_t Sheep::getAge() { return age_; }
+size_t Sheep::getAge() const { return age_; }
 
 void Sheep::changeHat(Hat hat) { hat_ = hat; }
 
-void Sheep::pet() { std::cout << "baaa" << std::endl; }
+void Sheep::pet() const { std::cout << "baaa" << std::endl; }

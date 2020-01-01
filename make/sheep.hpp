@@ -27,7 +27,7 @@ class Sheep {
    * \brief Accessor for the sheep's age
    * \return The sheep's age in years
    */
-  size_t getAge();
+  size_t getAge() const;
 
   /**
    * \brief Changes the sheep's hat
@@ -38,7 +38,7 @@ class Sheep {
   /**
    * \brief Pets the sheep, which makes the sheep happy
    */
-  void pet();
+  void pet() const;
 
  private:
   /** \brief The sheep's age in years */

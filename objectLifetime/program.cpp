@@ -28,13 +28,13 @@ void singletons() {
   Sheep shawn;
   Sheep elliot(std::string("Elliot"));
   Sheep dolly = elliot;
-  Sheep* shirley = new Sheep(std::string("Shirley"));
+  Sheep* benjamin = new Sheep(std::string("Benjamin"));
   Sheep& ref = shawn;
 
   dolly = shawn;
-  ref = *shirley;
+  ref = *benjamin;
 
-  delete shirley;
+  delete benjamin;
 
   std::cout << std::endl;
   Sheep::printStatistics();
@@ -46,7 +46,7 @@ void arrays() {
   std::cout << std::endl << ">> Example 2: Arrays" << std::endl;
 
   Sheep static1[3];
-  Sheep static2[2] = {std::string("Timmy"), std::string("Lambert")};
+  Sheep static2[2] = {std::string("Timmy"), std::string("Shirley")};
   Sheep static3[3] = {static2[0], std::string("Lola")};
   Sheep* dynamic1 = new Sheep[2];
   Sheep* dynamic2 = new Sheep[3]{std::string("Nuts"), static2[1]};
@@ -78,16 +78,30 @@ void lists() {
   std::cout << std::endl;
 }
 
+void vectors() {
+  Sheep::clearStatistics();
+  std::cout << std::endl << ">> Example 4: Vectors" << std::endl;
+
+  std::vector<Sheep> v;
+  for (size_t i = 0; i < 6; ++i) {
+    v.emplace_back();
+  }
+
+  std::cout << std::endl;
+  Sheep::printStatistics();
+  std::cout << std::endl;
+}
+
 void functions() {
   Sheep::clearStatistics();
-  std::cout << std::endl << ">> Example 4: Functions" << std::endl;
-  Sheep velvet(std::string("Velvet"));
+  std::cout << std::endl << ">> Example 5: Functions" << std::endl;
+  Sheep lambert(std::string("Lambert"));
 
-  Sheep petReturn = pet(velvet);
+  Sheep petReturn = pet(lambert);
   pet(Sheep(std::string("Casper")));
 
   Sheep petRefReturn;
-  petRefReturn = petRef(velvet);
+  petRefReturn = petRef(lambert);
   petRef(Sheep(std::string("Jasper")));
 
   std::cout << std::endl;
@@ -112,6 +126,7 @@ int main() {
   singletons();
   arrays();
   lists();
+  vectors();
   functions();
   user();
 

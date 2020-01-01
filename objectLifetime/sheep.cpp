@@ -18,35 +18,37 @@ Sheep::Sheep()
     : name_{"Default_Sheep_" + std::to_string(dConstructorCount_ + 1)} {
   ++dConstructorCount_;
   std::cout << "Call to Sheep default constructor: name = " << name_
-            << ", number = " << dConstructorCount_ << std::endl;
+            << ", call number = " << dConstructorCount_ << std::endl;
 }
 
 Sheep::Sheep(std::string name) : name_{name} {
   ++paramConstructorCount_;
   std::cout << "Call to Sheep parameterized constructor: name = " << name_
-            << ", number = " << paramConstructorCount_ << std::endl;
+            << ", call number = " << paramConstructorCount_ << std::endl;
 }
 
 Sheep::Sheep(const Sheep& other) : name_{other.name_ + "_copy"} {
   ++copyConstructorCount_;
   std::cout << "Call to Sheep copy constructor: name = " << name_
             << ", other = " << other.name_
-            << ", number = " << copyConstructorCount_ << std::endl;
+            << ", call number = " << copyConstructorCount_ << std::endl;
 }
 
 Sheep& Sheep::operator=(const Sheep& other) {
+  std::string originalName = name_;
   name_ = other.name_ + "_assigned";
   ++assignmentOpCount_;
-  std::cout << "Call to Sheep assignment operator: name = " << name_
+  std::cout << "Call to Sheep assignment operator: new name = " << name_
+            << ", original name = " << originalName
             << ", other = " << other.name_
-            << ", number = " << assignmentOpCount_ << std::endl;
+            << ", call number = " << assignmentOpCount_ << std::endl;
   return *this;
 }
 
 Sheep::~Sheep() {
   ++destructorCount_;
   std::cout << "Call to Sheep destructor: name = " << name_
-            << ", number = " << destructorCount_ << std::endl;
+            << ", call number = " << destructorCount_ << std::endl;
 }
 
 std::string Sheep::getName() const { return name_; }

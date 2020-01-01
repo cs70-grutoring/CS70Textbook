@@ -1,4 +1,4 @@
-# Copyright 2019 Matthew Calligaro
+# Copyright 2020 Matthew Calligaro
 # Makefile: A makefile for linting and formatting all code in the repository
 
 lint:

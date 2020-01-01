@@ -1,4 +1,4 @@
-# Copyright 2019 Matthew Calligaro
+# Copyright 2020 Matthew Calligaro
 # Makefile-simple: A simple makefile for generating program
 
 # Create the target executable

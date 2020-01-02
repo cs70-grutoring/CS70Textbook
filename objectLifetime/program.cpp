@@ -2,7 +2,7 @@
  * \file program.cpp
  * \copyright Matthew Calligaro
  * \date January 2020
- * \brief A command line program using the Sheep class
+ * \brief A command line program demonstrating principles of object lifetime
  */
 
 #include <iostream>
@@ -113,7 +113,7 @@ void user() {
   Sheep::clearStatistics();
   std::cout << std::endl << ">> User Experiments" << std::endl;
 
-  // Add your own experiments here!
+  // Add your own experiments here
 
   std::cout << std::endl;
   Sheep::printStatistics();
@@ -122,7 +122,7 @@ void user() {
 
 int main() {
   // To make the output easier to understand, it may help to run one example at
-  // a time by commenting out all other examples.
+  // a time by commenting out all other examples
   singletons();
   arrays();
   lists();

@@ -17,4 +17,4 @@ sheep.o: sheep.cpp sheep.hpp
 	$(CXX) $< -c $(CXXFLAGS)
 
 clean:
-	rm -rf *.o $(TARGET) documentation
+	rm -rf *.o $(TARGET)

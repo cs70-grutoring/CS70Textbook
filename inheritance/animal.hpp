@@ -12,7 +12,7 @@
 
 /**
  * \class Animal
- * \brief
+ * \brief An abstract class broadly defining any animal with legs
  */
 class Animal {
  public:

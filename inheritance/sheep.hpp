@@ -13,7 +13,7 @@
 
 /**
  * \class Sheep
- * \brief
+ * \brief A sheep with a hat which inherits from Animal
  */
 class Sheep : public Animal {
  public:

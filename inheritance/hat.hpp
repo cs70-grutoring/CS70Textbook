@@ -12,7 +12,7 @@
 
 /**
  * \class Hat
- * \brief
+ * \brief A very simple representation of a hat
  */
 class Hat {
  public:

@@ -34,5 +34,7 @@ format:
 	clang-format --style=file -i *.*pp
 
 # Automatically generate html/latex documentation with doxygen
-documentation: hat.hpp program.cpp sheep.cpp sheep.hpp
+# Every .cpp and .hpp file is a dependency, since we may need to update the
+# documentation if any code file is changed
+documentation: *.*pp
 	doxygen doxygen.cfg

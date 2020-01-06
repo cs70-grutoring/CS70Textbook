@@ -38,7 +38,7 @@ int main() {
   std::cout << *i1 << std::endl;
 
   // For a bidirectional iterator, operator-- moves the iterator to the previous
-  // element in the data structure.  A forward iterator need not support 
+  // element in the data structure.  A forward iterator need not support
   // operator--.
   --i1;
   std::cout << *i1 << std::endl;

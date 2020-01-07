@@ -20,7 +20,7 @@ Sheep elliot(std::string("Elliot"));
 ```
 
 ## Exercises
-Predict how many times the `Sheep` default constructor, parameterized constructor, copy constructor, assignment operator, and destructor are called in each of the five examples.  Then, compile and run `./program` and check if the output aligns with your prediction.  If it does not, revisit the code and identify your mistake.  You may find it helpful to add additional print statements.  
+Predict how many times the `Sheep` default constructor, parameterized constructor, copy constructor, assignment operator, and destructor are called in each of the five examples.  Then, compile and run `./program` and check if the output aligns with your prediction.  If it does not, revisit the code and identify your mistake.  You may find it helpful to add additional print statements.
 
 In the `user` function, create additional examples using the `Sheep` class based on any concepts you find confusing.  Run `./program` to see the results of your experiment.
 

@@ -11,7 +11,7 @@ Each section also contains relevant commented-out examples of undefined behavior
 To compile this code, navigate to this directory and run `make all`.  You can then execute the program with `./program`.  
 
 ## Exercises
-Read through the five sections and make sure that you understand what each line of code does.  Predict what will be printed to standard output by each example.  Compile and run `./program` and check if the output aligns with your prediction.
+Read through the five sections and make sure that you understand what each line of code does.  Predict what will be printed to standard output by each example.  Compile and run `./program` and check if the output aligns with your prediction.  If it does not, revisit the code and identify your mistake.  You may find it helpful to add additional print statements.
 
 Pay careful attention to the commented-out examples of compile-time errors and undefined behavior.  Make sure that you understand the problem with each example and can differentiate between compile-time errors and undefined behavior.
 

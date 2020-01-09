@@ -1,4 +1,5 @@
 /.vscode
+/textbook
 */documentation
 *.o
 *program

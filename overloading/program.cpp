@@ -48,13 +48,13 @@ void bar(double d, int i) {
             << i << std::endl;
 }
 
-void bax(int i, Hat h) {
-  std::cout << "bax(int i, Hat h) called with arguments " << i << " and " << h
+void baz(int i, Hat h) {
+  std::cout << "baz(int i, Hat h) called with arguments " << i << " and " << h
             << std::endl;
 }
 
-void bax(int i, double d) {
-  std::cout << "bax(int i, double d) called with arguments " << i << " and "
+void baz(int i, double d) {
+  std::cout << "baz(int i, double d) called with arguments " << i << " and "
             << d << std::endl;
 }
 
@@ -161,9 +161,9 @@ void overloading() {
    * bar(u, u);
    */
 
-  std::cout << std::endl << "Bax:" << std::endl;
+  std::cout << std::endl << "Baz:" << std::endl;
 
-  bax(i, i);
+  baz(i, i);
 
   std::cout << std::endl << "Overloading on const-ness:" << std::endl;
 

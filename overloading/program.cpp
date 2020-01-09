@@ -65,7 +65,7 @@ void transformations() {
 
   // Explict transformations
   int i1 = static_cast<int>(99.9);
-  int i2 = (int)95.7;  // NOLINT(readability/casting)
+  int i2 = (int)96.5;  // NOLINT(readability/casting)
 
   // Implicit transformations
   char c = 1;

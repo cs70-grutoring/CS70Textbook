@@ -5,8 +5,8 @@
  * \brief Declares the Sheep class
  */
 
-#ifndef MAKE_SHEEP_HPP_
-#define MAKE_SHEEP_HPP_
+#ifndef COMPILATION_SHEEP_HPP_
+#define COMPILATION_SHEEP_HPP_
 
 #include <cstddef>
 #include "hat.hpp"
@@ -48,4 +48,4 @@ class Sheep {
   Hat hat_;
 };
 
-#endif  // MAKE_SHEEP_HPP_
+#endif  // COMPILATION_SHEEP_HPP_

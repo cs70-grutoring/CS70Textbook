@@ -5,8 +5,8 @@
  * \brief Declares the Hat enum
  */
 
-#ifndef MAKE_HAT_HPP_
-#define MAKE_HAT_HPP_
+#ifndef COMPILATION_HAT_HPP_
+#define COMPILATION_HAT_HPP_
 
 /**
  * \enum Hat
@@ -14,4 +14,4 @@
  */
 enum Hat { None, Top, Bowler, Cowboy, Beret, Sombrero, Beanie };
 
-#endif  // MAKE_HAT_HPP_
+#endif  // COMPILATION_HAT_HPP_

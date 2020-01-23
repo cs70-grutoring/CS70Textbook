@@ -29,3 +29,14 @@ First, `make clean` and `make all` so that `program` is fully up to date.  For `
 1. Make a small change to the file and save it.  
 2. Thinking about which compilation and/or linking steps will be needed to update `program` with this change. 
 3. Run `make all` and carefully watch which compilation and/or linking steps are run.  Did this match your expectation?
+
+## Reflection Questions
+Use what you learned from these exercises to answer the following questions.
+1. How can we determine the proper dependencies for a Makefile rule?
+2. What is a phoney target and why is it useful?
+3. How does Make determine whether a rule needs to be executed?
+4. What is the difference between a compilation command and a linking command?
+5. If we change a particular file, how can we determine which compilation and linking steps need to be executed?
+6. What is the purpose of the `make all` command?
+7. What is the purpose of the `make clean` command?
+8. What is an advantage of using Makefile variables?

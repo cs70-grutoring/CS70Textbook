@@ -213,7 +213,7 @@ void example5() {
 }
 
 void user() {
-  std::cout << std::endl << ">> User Experiments" << std::endl;
+  std::cout << std::endl << ">> User experiments" << std::endl;
 
   // Add your own experiments here
 }

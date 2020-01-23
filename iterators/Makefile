@@ -7,7 +7,7 @@ TARGET = program
 
 all: $(TARGET)
 
-# This is just a compilation command, no linking is needed
+# This is just a compilation command, no linking command is needed
 program: program.cpp
 	$(CXX) -o $@ $< $(CXXFLAGS)
 

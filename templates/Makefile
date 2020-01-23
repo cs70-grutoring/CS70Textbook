@@ -7,11 +7,11 @@ TARGET = program heap-test
 
 all: $(TARGET)
 
-# This is just a compilation command, no linking is needed
+# This is just a compilation command, no linking command is needed
 program: program.cpp minheap.hpp minheap-private.hpp
 	$(CXX) -o $@ $< $(CXXFLAGS)
 
-# This is just a compilation command, no linking is needed
+# This is just a compilation command, no linking command is needed
 heap-test: heap-test.cpp minheap.hpp minheap-private.hpp
 	$(CXX) -o $@ $< $(CXXFLAGS)
 

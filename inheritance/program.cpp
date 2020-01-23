@@ -87,7 +87,7 @@ void inheritance() {
    * static_cast<MotorBike*>(bike3)->refillTank();
    */
 
-  std::cout << std::endl << "Calling Destructors:" << std::endl;
+  std::cout << std::endl << "Calling destructors:" << std::endl;
   delete bike3;
   delete motor3;
   delete motor5;
@@ -125,7 +125,7 @@ void abstractClasses() {
 }
 
 void user() {
-  std::cout << std::endl << ">> User Experiments" << std::endl;
+  std::cout << std::endl << ">> User experiments" << std::endl;
 
   // Add your own experiments here
 }
@@ -136,5 +136,6 @@ int main() {
   inheritance();
   abstractClasses();
   user();
+
   return 0;
 }

@@ -33,7 +33,7 @@ Read through examples 1 through 5 in `program.cpp`.  Make sure you understand wh
 ## Reflection Questions
 Use what you learned from these exercises to answer the following questions.
 1. How does the `minheap.hpp + minheap-private.hpp` combination differ from the more traditional `minheap.hpp + minheap.cpp` combination?  Why did we use the former in this case?
-2. In the `Makefile`, why is there no rule to compile `minheap.o`?  Why is there no linking step?
+2. In the `Makefile`, why is there no rule to compile `minheap.o`?  Why is there no linking command?
 3. What assumptions are made about the template type parameter `T` in `MinHeap`, `print`, and `uniqueInsert`?  In other words, what methods must this type support in each case?
 4. How many versions of each template function and template class are created during compilation?
 5. Why did we pass `ITERATIONS` to `d20` as a template parameter rather than a normal parameter?

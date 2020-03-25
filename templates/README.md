@@ -1,12 +1,13 @@
 # Templates and MinHeap
-This example explores function and class templates, and also provides a complete implementation of the binary min heap data structure.  `minheap.hpp` and `minheap-private.hpp` declare and implement the `MinHeap` class, a templated binary min heap.  `MinHeap` provides both an `iterator` and a `const_iterator`, which are implemented as a single `MinHeap::Iterator` class templated on a `bool`.  `heap-test.cpp` contains a collection of ad hoc tests of the `MinHeap` class.
+This example explores function and class templates, and also provides a complete implementation of the binary min heap data structure.  `minheap.hpp` and `minheap-private.hpp` declare and implement the `MinHeap` class, a templated binary min heap.  `MinHeap` provides both an `iterator` and a `const_iterator`, which are implemented as a single `MinHeap::Iterator` class templated on a `bool`.  `heap-test.cpp` contains a collection of ad hoc tests of the `MinHeap` class.  `safepointer.hpp` and `safepointer-private.hpp` implement a simplified version of the `unique_ptr` class, a wrapper for a pointer which manages memory ownership and helps prevent memory leaks.
 
-`program.cpp` contains three function templates: `print`, `d20`, and `uniqueInsert`.  It also contains five example functions which demonstrate different uses of templates.
+`program.cpp` contains three function templates: `print`, `d20`, and `uniqueInsert`.  It also contains six example functions which demonstrate different uses of templates.
 1. Using `print`, a function templated on parameter type.
 2. Using `d20`, a function templated on an `int`.
 3. Using `MinHeap`, a data structure templated on element type.
-4. Using the `MinHeap` Iterator, an bidirectional iterator templated on a `bool`.
+4. Using the `MinHeap` Iterator, a bidirectional iterator templated on a `bool`.
 5. Using `uniqueInsert`, a function templated on the type of two parameters.
+6. Using `SafePointer`, a class template similar to `unique_ptr`.
 
 Finally, the `user` function provides a sandbox in which you can write and run additional experiments.
 
@@ -15,7 +16,7 @@ To compile this code, navigate to this directory and run `make all`.  You can th
 ## MinHeap
 `MinHeap` is a binary min heap implemented as an extendable array.  Specifically, it is a class template templated on the type of the elements stored in the heap.  This data structure returns the smallest element in constant time and can insert new elements or delete the smallest element in `O(log n)` time.  While the data structure theoretically operates as a binary tree, we have implemented it as a contiguous array to increase efficiency.  This array will double and halve its size as needed to accommodate new or deleted elements.
 
-`MinHeap` also provides an `iterator` and a `const_iterator`, both of which are implemented through the `Iterator` class, which is templated on the `bool IS_CONST`.  This allows us to only write the iterator implementation once, since the only difference between an `iterator` and a `const_iterator` is the return type of `operator*` and `operator->`.  This is included as an example of the idiomatic way to implement an `iterator` and `const_iterator` with a single class.  **However, in reality, `MinHeap` should only support a const_iterator** since an iterator allows users to change elements without the knowledge of the `MinHeap`, which could result in elements being out of place.  
+`MinHeap` also provides an `iterator` and a `const_iterator`, both of which are implemented through the `Iterator` class, which is templated on the `bool IS_CONST`.  This allows us to only write the iterator implementation once, since the only difference between an `iterator` and a `const_iterator` is the return type of `operator*` and `operator->`.  This is included as an example of the idiomatic way to implement an `iterator` and `const_iterator` with a single class.  **However, in reality, `MinHeap` should only support a const_iterator** since an iterator allows users to change elements without the knowledge of the `MinHeap`, which could result in elements being out of place.
 
 To generate the complete documentation for this class, run `make documentation`, which will generate a `documentation` directory.  Open `documentation/html/classMinHeap.html` in a web browser to read the complete documentation for this class.
 
@@ -28,7 +29,7 @@ Read through `minheap.hpp` and `minheap-private.hpp`, paying careful attention t
 
 Read through the function templates `print`, `d20`, and `uniqueInsert` in `program.cpp`.  Make sure that you understand the role that the template parameter plays in each function.  What assumptions are made about the template type `T` in `print` and `uniqueInsert`?
 
-Read through examples 1 through 5 in `program.cpp`.  Make sure you understand why the commented out code will cause compile-time errors.  For each example, determine how many versions of each function and class template are created during compilation.  Predict what will be printed to standard output by each example.  Then, compile and run `./program` and check if the output aligns with your prediction.  If it does not, revisit the code and identify your mistake.  You may find it helpful to add additional print statements.
+Read through examples 1 through 6 in `program.cpp`.  Make sure you understand why the commented out code will cause compile-time errors.  For each example, determine how many versions of each function and class template are created during compilation.  Predict what will be printed to standard output by each example.  Then, compile and run `./program` and check if the output aligns with your prediction.  If it does not, revisit the code and identify your mistake.  You may find it helpful to add additional print statements.
 
 ## Reflection Questions
 Use what you learned from these exercises to answer the following questions.

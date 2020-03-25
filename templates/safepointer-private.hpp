@@ -5,9 +5,11 @@
  * \brief Provides the template implementation for the SafePointer class
  */
 
-// The following line tells cpplint that we don't need a header guard for this
-// file, since minheap.hpp already has a header guard:
+// This file does not need a headerguard because its contents will be included
+// within the header guard of safepointer.hpp.
 // NOLINT(build/header_guard)
+
+// All of the SafePointer method templates are found below
 
 template <typename T>
 SafePointer<T>::SafePointer() : pointer_{nullptr} {}

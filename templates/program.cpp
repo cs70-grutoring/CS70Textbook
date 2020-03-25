@@ -216,18 +216,32 @@ void example5() {
 void example6() {
   std::cout << std::endl << ">> Example 6: Using SafePointer" << std::endl;
 
+  // This will cause the compiler to create an int version of the SafePointer
+  // default constructor
   SafePointer<int> p1;
+
+  // This will cause the compiler to create an int version of the SafePointer
+  // parameterized constructor
   SafePointer<int> p2(new int(12));
+
+  // This will cause the compiler to create a double version of the SafePointer
+  // parameterized constructor
   SafePointer<double> p3(new double(1.27));
 
+  // This will cause the compiler to create an int version of the SafePointer
+  // operator*
   *p2 += 3;
 
   std::cout << *p2 << std::endl;
+
+  // This will cause the compiler to create a double version of SafePointer
+  // operator*
   std::cout << *p3 << std::endl;
 
-  // No deletes are necessary, the SafePointer destructor will clean up all
-  // heap memory
-}
+  // The SafePointer destructor will clean up all heap memory on the closing
+  // curly bracket, so no explicit deletes are necessary
+}  // This will cause the compiler to create int and double versions of the
+   // SafePointer destructor
 
 void user() {
   std::cout << std::endl << ">> User experiments" << std::endl;

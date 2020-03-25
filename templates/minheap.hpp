@@ -319,11 +319,11 @@ class MinHeap {
   };
 };
 
-// During precompilation, this will paste the contents of
-// minheap-private.hpp at this point, which effectively combines
-// minheap.hpp and minheap-private.hpp into a single file.  We divide
-// them into two files to separate the interface and implementation of
-// MinHeap, but as far as the compiler is concerned, they are one file.
+// During preprocessing, this will paste the contents of minheap-private.hpp at
+// this point, which effectively combines minheap.hpp and minheap-private.hpp
+// into a single file.  We divide them into two files to separate the interface
+// and implementation of MinHeap, but as far as the compiler is concerned,
+// they are one file.
 #include "minheap-private.hpp"
 
 #endif  // TEMPLATES_MINHEAP_HPP_

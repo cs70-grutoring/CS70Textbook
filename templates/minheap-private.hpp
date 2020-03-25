@@ -1,5 +1,5 @@
 /**
- * \file minheap.cpp
+ * \file minheap-private.hpp
  * \copyright Matthew Calligaro
  * \date January 2020
  * \brief Provides the template implementation for the MinHeap class

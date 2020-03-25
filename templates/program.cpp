@@ -9,6 +9,7 @@
 #include <list>
 #include <string>
 #include "minheap.hpp"
+#include "safepointer.hpp"
 
 /**
  * \brief Prints an object to standard out
@@ -212,6 +213,22 @@ void example5() {
    */
 }
 
+void example6() {
+  std::cout << std::endl << ">> Example 6: Using SafePointer" << std::endl;
+
+  SafePointer<int> p1;
+  SafePointer<int> p2(new int(12));
+  SafePointer<double> p3(new double(1.27));
+
+  *p2 += 3;
+
+  std::cout << *p2 << std::endl;
+  std::cout << *p3 << std::endl;
+
+  // No deletes are necessary, the SafePointer destructor will clean up all
+  // heap memory
+}
+
 void user() {
   std::cout << std::endl << ">> User experiments" << std::endl;
 
@@ -226,6 +243,7 @@ int main() {
   example3();
   example4();
   example5();
+  example6();
   user();
 
   return 0;

@@ -8,7 +8,8 @@ TARGET = program heap-test
 all: $(TARGET)
 
 # This is just a compilation command, no linking command is needed
-program: program.cpp minheap.hpp minheap-private.hpp
+program: program.cpp minheap.hpp minheap-private.hpp safepointer.hpp \
+	safepointer-private.hpp
 	$(CXX) -o $@ $< $(CXXFLAGS)
 
 # This is just a compilation command, no linking command is needed
